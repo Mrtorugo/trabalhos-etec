@@ -1,0 +1,28 @@
+import Exercicio0706;
+public class INSS {
+    public static void main (String args []) {
+        System.out.println ("Programa para Calcular o INSS");
+        System.out.println ("Digite o Valor do Salário Bruto do Funcionário: ");
+        Scanner sc = new Scanner (System.in);
+        double salariobruto = sc.nextDouble();
+
+        System.out.println (calcularINSS(salariobruto));
+    }
+
+    public static double calcularINSS (double salariobruto) {
+        double inss = 0.0;
+      
+        if (salariobruto <= 720) {
+          double inss = salariobruto * 0.0765;
+        } else if (salariobruto <= 1200) {
+          double inss = salariobruto * 0.09;
+        } else if (salariobruto <= 2400) {
+          double inss = salariobruto * 0.11;
+        }  else {
+          double inss = 2400 * 0.11;
+        }    
+        return inss;
+      }
+}
+
+/* Vitor Hugo De Jesus Silva */ 
